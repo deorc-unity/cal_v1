@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>ROI</title>
+</head>
+<body>
+    <header>
+        <img src = 'Whatfix_logo.png' height="30px" width="auto">
+    </header>
+
+    <div class="container">
+        <form action="" id="section1" name="contact-form" method="post">
+            <h3>Basic Information</h3>
+                <div class="inputBox">
+                    <input type="text" id="email" name="email" required>
+                    <span>Email</span>
+                </div> <br />
+                <div class="inputBox">
+                    <input type="text" id="company" name="company" required>
+                    <span>Company</span>
+                </div> <br />
+                <div class="inputBox">
+                    <input type="text" id="designation" name="designation" required>
+                    <span>Designation</span>
+                </div>
+
+                <div class="btn-box">
+                    <button type="submit" id="Next1">
+                        Next
+                    </button>
+                </div>
+        </form>
+
+        <form action="" id="section2" class="not_apply">
+            <h3 style="text-align: left">How would you best describe your expertise with Digital Adoption Platforms?</h3>
+             <div class="expertise">
+                 <br/>
+                    <input type="radio" name="q1" value="113672">  Using it in my current organization <br/><br />
+                    <input type="radio" name="q1" value="113672">  Used it in my previous organization <br/><br />
+                    <input type="radio" name="q1" value="113672">  Limited understanding of DAP <br/><br />
+                    <input type="radio" name="q1" value="113672">  Currently researching about DAP <br/><br />
+                    <input type="radio" name="q1" value="113672">  Not aware of digital adoption platforms <br/><br />
+                <br>
+             </div>
+            
+             <div class="btn-box">
+                <button type="button" id="Back1">
+                    Previous
+                </button>
+                <button type="button" id="Next2">
+                    Next
+                </button>
+            </div>
+        </form>
+
+        <form action="" id="section3">
+            
+            <h4>Select an application category that might be relevant to you:</h4>
+            <div class="question_re">
+                <select name="q2" id="q2" onchange="showInputBox();">
+                  <option value="moderate">CMS (WordPress,Appie Pie Website Builder,Hubspot CMS Hub)</option>
+                  <option value="moderate">CRM (Salesforce,SAP, Oracle, Microsoft Dynamics)</option>
+                  <option value="moderate">ERP (Oracle NetSuite,SAP ECC, Delteck CostPoint)</option>
+                  <option value="moderate">HCM (Zoho People, Darwinbox, factorHR)</option>
+                  <option value="moderate">HRIS (ADP, Namely, BambooHR)</option>
+                  <option value="moderate">ITSM (Jira, Zendesk, ServiceNow)</option>
+                  <option value="moderate">HRMS (SAP Success Factor, Workday, ADP)</option>
+                  <option value="moderate">EMS (TMW Suite, Responder 360)</option>
+                  <option value="moderate">POS (Clover, LightSpeed, Shopify)</option>
+                  <option value="moderate">EMR (Epic, Meditech, NextGen)</option>
+                  <option value="moderate">SAOS (Ceina Software)</option>
+                  <option value="moderate">BSS (Oracle Support, Ericsson Digital BSS, NetCracker Avenue)</option>
+                  <option value="moderate">LMS (Talent LMS, Adobe Learning Manager,360 Learning)</option>
+                  <option value="moderate">DMS (Adobe Documnet CLoud, PaperSave,Zoho)</option>
+                  <option value="moderate">Project Management (Asana, Trello, Jira)</option>
+                  <option value="moderate">Collaborations (Slack, Confluence)</option>
+                  <option value="other">Other</option>
+                </select><br>
+                <div id="otherInput" style="display: none;">
+                    <input type="text" id="otherValue" placeholder="Enter your choice" onblur="updateOption();">
+                </div>
+            </div>
+
+            <h4>Which region are you looking to deploy with the Whatfix Digital Adoption Platform?</h4>
+            <div class="question_re">
+                <select id="q3">
+                    <option value="18.46068">Global</option>
+                    <option value="34.44602">Americas</option>
+                    <!--<option value="34.44602">South America</option>-->
+                    <option value="22.23352">Europe</option>
+                    <option value="23.41193">Australia/ New Zealand</option>
+                    <option value="8.87784">Southeast Asia</option>
+                    <option value="3.12898">India</option>
+                    <!--<option value="8.87784">Middle East/ Africa</option>-->
+                </select><br>
+            </div>
+
+            <h4>How many end users do you have for this application?</h4>
+            <div class="slider-area">
+                <button type="button" class="slideButtonNegative" onclick="decreaseSliderValue()">-</button>
+                <input class="mainSlider" type="range" name="slider" id="slider" min="0" max="50000" step="500" value="500"
+                style="margin-left: 0px ;">
+                <button type="button" class="slideButtonPositive" onclick="increaseSliderValue()">+</button>
+            </div>
+            <span id="slider-value">500</span><br>
+            
+        
+            <div class="btn-box">
+                <button type="button" id="Back2">
+                    Previous
+                </button>
+                <button type="button" id="Next3">
+                    Next
+                </button>
+            </div>
+        </form>
+
+        <form action="" id="section4" class="not_apply" method="post" name="final-page">
+            <h3>Select the impact areas for your organization:</h3>
+            <input type="checkbox" name="q4" value="6.6"> Quickly onboard and train the end users on the application <br /><br />
+            <input type="checkbox" name="q4" value="0.8"> Communicate the change in the process, application feature etc. to the end users and help them adopt to it <br /><br />
+            <input type="checkbox" name="q4" value="3.15"> Reduce the time to go-live for the end users and help them contribute to the organisation <br /><br />
+            <input type="checkbox" name="q4" value="525"> Deflect the queries and optimize the time take to resolve them <br /><br />
+            <input type="checkbox" name="q4" value="2508.8"> Reduce effort to create support and training material for the end users to understand the application <br /><br />
+            <input type="checkbox" name="q4" value="14598.08"> Optimize efforts to translate the support/enablement content from English to other languages <br />
+
+            <div class="btn-box">
+                <button type="button" id="Back3">
+                    Previous
+                </button>
+                <button class="btn" type="submit">
+                    Submit
+                </button>
+            </div>
+        </form>
+
+        <div class="step-row">
+            <div id="progress">
+                
+            </div>
+            <div class="step-col">
+                <small>Step 1</small>
+            </div>
+            <div class="step-col">
+                <small>Step 2</small>
+            </div>
+            <div class="step-col">
+                <small>Step 3</small>
+            </div>
+            <div class="step-col">
+                <small>Step 4</small>
+            </div>
+        </div>
+
+        <!--<div class="section hidden" id="result">
+            <h2>Final Result:</h2>
+            <p id="final-value"></p>
+          </div>
+        </div>-->
+
+    </div>
+
+    <script>
+        const emailValid = document.getElementById('email');
+        const designationValid = document.getElementById('designation');
+        const companyValid = document.getElementById('company');
+
+
+        var Form1 = document.getElementById("section1");
+        var Form2 = document.getElementById("section2");
+        var Form3 = document.getElementById("section3");
+        var Form4 = document.getElementById("section4");
+
+        var Next1 = document.getElementById("Next1");
+        var Next2 = document.getElementById("Next2");
+        var Next3 = document.getElementById("Next3");
+        var Back1 = document.getElementById("Back1");
+        var Back2 = document.getElementById("Back2");
+        var Back3 = document.getElementById("Back3");
+
+        var progress = document.getElementById("progress");
+
+        let popup = document.getElementById("popup");
+
+        let messages = [];
+
+        if(emailValid.value==='' || emailValid.value==null){
+            messages.push('Email is required');
+        }
+
+        function openPopup() {
+            popup.classList.add("open-popup");
+        }
+
+        function closePopup() {
+            popup.classList.remove("open-popup");
+        }
+
+        Next1.onclick = function() {
+            Form1.style.left = "-700px";
+            Form2.style.left = "40px";
+            progress.style.width = "240px";
+        }
+
+        Back1.onclick = function() {
+            Form1.style.left = "40px";
+            Form2.style.left = "700px";
+            progress.style.width = "120px";
+        }
+
+        Next2.onclick = function() {
+            Form2.style.left = "-700px";
+            Form3.style.left = "40px";
+            progress.style.width = "360px";
+        }
+
+        Back2.onclick = function() {
+            Form2.style.left = "40px";
+            Form3.style.left = "700px";
+            progress.style.width = "240px";
+        }
+
+        Next3.onclick = function() {
+            Form3.style.left = "-700px";
+            Form4.style.left = "40px";
+            progress.style.width = "500px";
+        }
+
+        Back3.onclick = function() {
+            Form3.style.left = "40px";
+            Form4.style.left = "700px";
+            progress.style.width = "360px";
+        }
+
+        function showInputBox() {
+    var selectElement = document.getElementById("q2");
+    var inputBox = document.getElementById("otherInput");
+
+    if (selectElement.value === "other") {
+        inputBox.style.display = "block";
+    } else {
+        inputBox.style.display = "none";
+    }
+}
+
+function updateOption() {
+        var selectElement = document.getElementById("q2");
+        var inputBox = document.getElementById("otherValue");
+        var otherOption = document.querySelector('option[value="other"]');
+
+        if (inputBox.value.trim() !== "") {
+            otherOption.textContent = inputBox.value;
+            otherOption.value = inputBox.value;
+            selectElement.value = inputBox.value;
+        } else {
+            otherOption.textContent = "others";
+            otherOption.value = "other";
+            selectElement.value = "other";
+        }
+
+        inputBox.value = ""; // Clear the input field
+        inputBox.style.display = "none";
+        showInputBox(); // Hide the input box
+
+    }
+
+    var inputBox = document.getElementById("otherValue");
+    inputBox.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault(); // Prevent default Enter key behavior
+            updateOption(); // Call your updateOption function
+        }
+    });
+        
+
+        const form = document.getElementById('section4');
+        const resultDiv = document.getElementById('result');
+        const finalValue = document.getElementById('final-value');
+        const slider = document.getElementById('slider');
+        const sliderValueDisplay = document.getElementById('slider-value');
+        //const selectElement = document.getElementById("q3");
+        //const selectedValue = parseFloat(selectElement.value);
+
+        //const selectElement = document.getElementById('q3');
+        //const selectedOption = selectElement.options[selectElement.selectedIndex];
+        //const selectedValue = selectedOption.value;
+
+        
+
+    let selectedValue = 18.46068; // Declare a variable outside the event listener
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const SelectElement = document.getElementById("q3");
+
+        SelectElement.addEventListener("change", () => {
+            const SelectedValue = SelectElement.value;
+            const SelectedFloatValue = parseFloat(SelectedValue);
+
+            selectedValue = SelectedFloatValue;
+        });
+    });
+
+// Now you can use `storedSelectedValue` outside the event listener
+console.log("Stored Selected Value:", selectedValue);
+
+        function increaseSliderValue() {
+        if (parseInt(slider.value) < parseInt(slider.max)) {
+            slider.value = parseInt(slider.value) + parseInt(slider.step);
+            updateSliderValueDisplay();
+        }
+        }
+
+        function decreaseSliderValue() {
+        if (parseInt(slider.value) > parseInt(slider.min)) {
+            slider.value = parseInt(slider.value) - parseInt(slider.step);
+            updateSliderValueDisplay();
+        }
+        }
+
+        function updateSliderValueDisplay() {
+        sliderValueDisplay.textContent = slider.value;
+        }
+
+        slider.addEventListener("input", updateSliderValueDisplay);
+        
+        // Initial value display
+        updateSliderValueDisplay();
+
+        form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        console.log('Number of Employees: '+slider.value);
+        console.log('Region Value: '+selectedValue);
+
+
+        // Assign weights to the options
+        const weights = {
+            //'q1': 2, // Weight for Question 1
+            //'q2': 3, // Weight for Question 2
+            'q3': 0, // Weight for Question 2
+            'q4': 0, // Weight for Question 2
+            // ...add more weights as needed...
+        };
+
+        const selectedOptions = form.querySelectorAll('input:checked');
+
+        let checkedValue = 0;
+
+        selectedOptions.forEach(checkbox => {
+            if(parseInt(checkbox.value) == 6) {
+                checkedValue += (6.6 * selectedValue * parseInt(slider.value));
+            } else if(parseInt(checkbox.value) == 0) {
+                checkedValue += (0.8 * selectedValue * parseInt(slider.value));
+            } else if(parseInt(checkbox.value) == 3) {
+                checkedValue += (3.25 * selectedValue * parseInt(slider.value));
+            } else if(parseInt(checkbox.value) == 525) {
+                checkedValue += (525 * selectedValue);
+            } else if(parseInt(checkbox.value) == 2508) {
+                checkedValue += (2508.8 * selectedValue);
+            } else {
+                checkedValue += 14598.08;
+            }
+        })
+
+        let totalValue = 0;
+        totalValue += checkedValue * 0.75 * 1.5
+
+
+        //resultDiv.classList.remove('hidden');
+        //finalValue.textContent = `Your calculated value is: ${totalValue}`;
+
+        const company_ = document.getElementById('company');
+        const designation_ = document.getElementById('designation');
+
+        //const roundedValue = Math.round(totalValue);
+        const roundedValue = Math.round(totalValue / 100) * 100;
+
+
+        const formattedValue = roundedValue.toLocaleString();
+
+        const scriptURL = 'https://script.google.com/a/macros/whatfix.com/s/AKfycbxrtk0RcjNSH45dUdaCdex99cYv-gz_T7NcMw5trZq8xtk3IPqhjtE_1kjl2QIbQ-XPNw/exec';
+        const FORM = document.forms['contact-form']
+        FORM.addEventListener('button', e => {
+            e.preventDefault()
+            fetch(scriptURL, {method: 'POST', body: new FormData(FORM)})
+            .then(response => alert("Thank You"))
+            .then(() => {window.location.reload(); })
+            .catch(error => console.log('Error!', error.message))
+        })
+
+
+        alert(`Company: ${company_.value}\n
+Designation: ${designation_.value}\n
+Your calculated value is: $${formattedValue}`);
+
+        //resultDiv.classList.remove('hidden');
+        //finalValue.textContent = `Your calculated value is: $${formattedValue}`;
+
+    });
+
+    </script>
+</body>
+</html>
